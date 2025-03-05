@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Preferences - Recipe Planner</title>
+</head>
+<body>
+    <h1>Set Your Preferences</h1>
+    <form action="/save_preferences" method="POST">
+        <label>Dietary Restrictions:</label>
+        <input type="text" name="diet" required><br>
+        <label>Favorite Cuisine:</label>
+        <input type="text" name="cuisine" required><br>
+        <label>Number of Meals per Week:</label>
+        <input type="number" name="meals_per_week" required><br>
+        <button type="submit">Save Preferences</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Recipe Input - Recipe Planner</title>
+</head>
+<body>
+    <h1>Add a Recipe</h1>
+    <form action="/recipe_input" method="POST">
+        <label>Recipe Name:</label>
+        <input type="text" name="recipe_name" required><br>
+        <label>Ingredients:</label>
+        <textarea name="ingredients" required></textarea><br>
+        <button type="submit">Save Recipe</button>
+    </form>
+    <br>
+    <a href="/preferences"><button>Back to Preferences</button></a>
+</body>
+</html>

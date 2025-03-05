@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Recipe Plan - Recipe Planner</title>
+</head>
+<body>
+    <h1>Your Personalized Recipe Plan</h1>
+    <p>Name: {{ data.name }}</p>
+    <p>Dietary Restrictions: {{ data.preferences.get('diet', 'N/A') }}</p>
+    <p>Favorite Cuisine: {{ data.preferences.get('cuisine', 'N/A') }}</p>
+    <p>Meals per Week: {{ data.preferences.get('meals_per_week', 'N/A') }}</p>
+    
+    <h2>Recipes</h2>
+    {% if data.recipes %}
+        <ul>
+        {% for recipe in data.recipes %}
+            <li><strong>{{ recipe.name }}</strong>: {{ recipe.ingredients }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No recipes added. Please add some!</p>
+    {% endif %}
+    
+    <br>
+    <a href="/recipe_input"><button>Add More Recipes</button></a>
+</body>
+</html>
